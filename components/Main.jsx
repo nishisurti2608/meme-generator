@@ -3,6 +3,7 @@ import { useState } from "react"
 
 
 export default function Main() {
+
    const [meme,setMeme] = useState({
 
 
@@ -10,6 +11,12 @@ export default function Main() {
     bottomText : "Walk into Mordor" ,
     imageURL : "http://i.imgflip.com/1bij.jpg"
 })
+
+
+function handleChange(event){
+const {value} = event.currentTarget
+setMeme((prevMeme) => ({...prevMeme, topText:value}))
+}
     return (
         <main>
             <div className="form">
@@ -18,6 +25,7 @@ export default function Main() {
                         type="text"
                         placeholder="One does not simply"
                         name="topText"
+                        onChange={handleChange} //calling fn on change event 
                     />
                 </label>
 
