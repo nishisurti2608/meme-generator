@@ -23,6 +23,15 @@ function handleChange(event){
 const {value,name} = event.currentTarget
 setMeme((prevMeme) => ({...prevMeme, [name]:value}))
 }
+
+function getNewMeme () {
+
+    const number = Math.floor(Math.random()* allMemes.length)
+    const newImage = allMemes[number].url
+    setMeme((prevMeme) => ({
+    ...prevMeme, imageURL:newImage
+    }))
+}
     return (
         <main>
             <div className="form">
@@ -43,7 +52,7 @@ setMeme((prevMeme) => ({...prevMeme, [name]:value}))
                         onChange={handleChange}
                     />
                 </label>
-                <button>Get a new meme image 🖼</button>
+                <button onClick={getNewMeme} >Get a new meme image 🖼</button>
             </div>
             <div className="meme">
                 <img src= {meme.imageURL}/>
