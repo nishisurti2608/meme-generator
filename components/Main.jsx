@@ -14,8 +14,8 @@ export default function Main() {
 
 
 function handleChange(event){
-const {value} = event.currentTarget
-setMeme((prevMeme) => ({...prevMeme, topText:value}))
+const {value,name} = event.currentTarget
+setMeme((prevMeme) => ({...prevMeme, [name]:value}))
 }
     return (
         <main>
@@ -34,6 +34,7 @@ setMeme((prevMeme) => ({...prevMeme, topText:value}))
                         type="text"
                         placeholder="Walk into Mordor"
                         name="bottomText"
+                        onChange={handleChange}
                     />
                 </label>
                 <button>Get a new meme image 🖼</button>
