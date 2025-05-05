@@ -17,3 +17,14 @@ The Frontend Developer Career Path aims to teach you everything you need to beco
 - [Become a Scrimba Pro member](https://scrimba.com/pricing)
 
 Happy Coding!
+
+## Challanges : 
+
+## Challange:1 
+ 
+      Challenge: move the hardcoded meme info into React
+      state. Use an object with `topText`, `bottomText`,
+      and `image` properties, and set the initial values to
+      the ones hardcoded below.
+  
+    
